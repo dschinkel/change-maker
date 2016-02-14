@@ -20,14 +20,13 @@ class ChangeMaker
     end
 
     return combinations != [] ? combinations : raise(ChangeError)
-  endgit
+  end
 
 
   def self.find_combinations(amount, denominations)
     onlyOneDenomination = denominations.count == 1
     remainder = amount
     change = []
-
 
     if onlyOneDenomination
       numberOfDuplicationsNeeded = amount / denominations[0]
